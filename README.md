@@ -7,15 +7,13 @@
 * 注）AWS アカウントが事前に必要です。また、サービスクオータの緩和申請が事前に必要なことがあります。
 * 2020/12/23時点で動作することを確認しています。
 
-{アカウント番号(12桁の数字)}. signin.aws.amazon.com/console
-にブラウザ(chrome/firefox
+{アカウント番号(12桁の数字)}. signin.aws.amazon.com/console にブラウザ(chrome/firefox
 推奨)でアクセスし、ご自身のIAMユーザとパスワードを入力し、「サインイン」をクリックします。
 
 ---
 ## 手順
 
-![](media/image1.png)上部中央の検索窓に「sage」と入力すると「Amazon
-SageMaker」 のリンクが表示されますのでクリックします。
+![](media/image1.png)上部中央の検索窓に「sage」と入力すると「Amazon SageMaker」 のリンクが表示されますのでクリックします。
 
 ![](media/image2.png)
 
@@ -31,13 +29,11 @@ SageMaker」 のリンクが表示されますのでクリックします。
 
 ![](media/image5.png)これから作成するノートブックインスタンスの設定を行います。下記を設定ください。
 
-ノートブックインスタンス名 :
-AWSアカウント内で一意になるように設定。ex:){name}-handson-YYYYMMDD
+ノートブックインスタンス名 : AWSアカウント内で一意になるように設定。ex:){name}-handson-YYYYMMDD
 
 ノートブックインスタンスのタイプ : ml.c5.xlarge (CPUが高性能)
 
-IAMロール : IAM
-ロールを選択、と書かれたプルダウンをクリックし、新しいロールの作成をクリックする。
+IAMロール : IAM ロールを選択、と書かれたプルダウンをクリックし、新しいロールの作成をクリックする。
 
 ![](media/image6.png)
 
@@ -53,19 +49,15 @@ IAMロール : IAM
 
 ![](media/image9.png)
 
-「Git リポジトリの URL
-
-のテキストボックスに、<https://github.com/kazuhitogo/sagemaker-tf-handson-with-byoc-preprocess-and-byom-hosting>を入力し、「ノートブックインスタンスの作成」をクリック。
+「Git リポジトリの URL のテキストボックスに、<https://github.com/kazuhitogo/sagemaker-tf-handson-with-byoc-preprocess-and-byom-hosting>を入力し、「ノートブックインスタンスの作成」をクリック。
 
 ![](media/image10.png)
 
-上部に「成功！～～」と表示され、ステータスが Pending または InProgress
-になっていればOKです。しばらく待ちます。
+上部に「成功！～～」と表示され、ステータスが Pending または InProgress になっていればOKです。しばらく待ちます。
 
 ![](media/image11.png)
 
-ステータスが InService に変わりましたら、「Jupter
-を開く」をクリックします。
+ステータスが InService に変わりましたら、「 Jupter を開く」をクリックします。
 
 ![](media/image12.png)
 
@@ -73,14 +65,10 @@ IAMロール : IAM
 
 ![](media/image13.png)
 
-ご自身の内容を入力し、保存します。保存は File -\> Save
-でも、(Winの場合)ctrl + s
-でも可能です。完了したらそのタブは閉じて構いません。
+ご自身の内容を入力し、保存します。保存は File -> Saveでも、(Winの場合) ctrl + s でも可能です。完了したらそのタブは閉じて構いません。
 
 ![](media/image14.png)
 
-以降、0_data_preperation.ipynb, 1_preprocess_kick.ipynb,
-2_tf_mnist_train.ipynb, 3_byom.ipynb
-の順番に実行していきます。各ノートブックに記載されている中身を参照ください。
+以降、0_data_preperation.ipynb, 1_preprocess_kick.ipynb, 2_tf_mnist_train.ipynb, 3_byom.ipynb の順番に実行していきます。各ノートブックに記載されている中身を参照ください。
 
 ![](media/image15.png)
