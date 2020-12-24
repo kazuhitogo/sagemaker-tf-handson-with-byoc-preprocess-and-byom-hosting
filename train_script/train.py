@@ -75,9 +75,6 @@ def _load_testing_data(base_dir):
 
 def _parse_args():
     parser = argparse.ArgumentParser()
-
-    # Data, model, and output directories
-    # model_dir is always passed in from SageMaker. By default this is a S3 path under the default bucket.
     parser.add_argument('--model_dir', type=str)
     parser.add_argument('--sm-model-dir', type=str, default=os.environ.get('SM_MODEL_DIR'))
     parser.add_argument('--train', type=str, default=os.environ.get('SM_CHANNEL_TRAIN'))
@@ -97,7 +94,4 @@ if __name__ == "__main__":
 
     mnist_classifier = model(train_data, train_labels, eval_data, eval_labels,args.epochs,args.dropout_rate)
     save_model_path = os.path.join(args.sm_model_dir, '000000001')
-#     mnist_classifier.save(save_model_path, 'my_model.h5')
     mnist_classifier.save(save_model_path)
-#     if args.current_host == args.hosts[0]:
-#         mnist_classifier.save(os.path.join(args.sm_model_dir, '000000001'), 'my_model.h5')
