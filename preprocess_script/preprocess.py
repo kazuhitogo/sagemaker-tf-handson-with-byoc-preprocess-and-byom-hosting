@@ -29,9 +29,7 @@ if __name__=='__main__':
     print(f'decompress {input_data_path}')
     with zipfile.ZipFile(input_data_path) as existing_zip:
         existing_zip.extractall(args.input_dir)
-    # train_x = np.zeros((len(glob(args.input_dir + '/dataset/train_x/*.png')),28,28,1)).astype('float32')
     train_x = np.zeros((len(glob(args.input_dir + '/train_x/*.png')),28,28,1)).astype('float32')
-    # test_x = np.zeros((len(glob(args.input_dir + '/dataset/test_x/*.png')),28,28,1)).astype('float32')
     test_x = np.zeros((len(glob(args.input_dir + '/test_x/*.png')),28,28,1)).astype('float32')
 
     for i,img_file in enumerate(sorted(glob(args.input_dir + '/train_x/*.png'))):
